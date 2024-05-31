@@ -231,8 +231,10 @@ func set(data []int) {
 	data[0] = 1
 	data = append(data, 1)
 	data[0] = 1
-	for _ := range data {
-
+	for _, r := range data {
+		fmt.Println("before: ", r)
+		r = 2
+		fmt.Println("after: ", r)
 	}
 	fmt.Println(data, unsafe.Sizeof(data))
 }
